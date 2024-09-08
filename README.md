@@ -3,6 +3,7 @@ Module Python - Oteria Cyber School
 Ce projet fait partie d'un module de développement Python enseigné par Ebel Franck. Le module se concentre sur l'apprentissage et la consolidation des bases de Python, ainsi que sur l'utilisation de bibliothèques pour créer des outils de pentest et de forensic.
 
 Contenu du module :
+
 Séances 1 & 2 :
 Variables, types particuliers (listes, tuples, dictionnaires), conditions, boucles, définitions, et exercices pratiques.
 
