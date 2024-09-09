@@ -1,4 +1,4 @@
-Module Python - Oteria Cyber School
+Module Python - Oteria Cyber School - B3 2024
 
 Ce projet fait partie d'un module de développement Python enseigné par Ebel Franck. Le module se concentre sur l'apprentissage et la consolidation des bases de Python, ainsi que sur l'utilisation de bibliothèques pour créer des outils de pentest et de forensic.
 
@@ -29,6 +29,8 @@ Soutenance orale du projet en trinôme.
 TP Contrôle : 50 XP
 Projet en trinôme avec soutenance : 150 XP
 Évaluation bonus (facultative) : Vidéo de mini-soutenance (50 XP supplémentaires, sous réserve de validation du cours).
+
+
 Ressources supplémentaires :
 Vidéos préparatoires disponibles sur YouTube
 Supports de cours sur Google Classroom, extraits du livre d'Ebel Franck.
