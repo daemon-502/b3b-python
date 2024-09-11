@@ -174,3 +174,136 @@ mot_user1 = input("Entrez un mot : ")
 print(comptePointsVoyellesConsonnes(mot_user1))
 
 points_voyelles, points_consonnes = comptePointsVoyellesConsonnes(mot_user1)
+
+
+#EXO 5
+#Question A
+def palindrome(mot):
+    if(mot==mot[::-1]):
+        return True
+    else:
+        return False
+
+#Question B
+def compter(ph1,ph2):
+    cpt=0
+    for i in range(0,len(ph2)-len(ph1)):
+        if ph2[i:len(ph1)+i]==ph1:
+            cpt=cpt+1
+    return cpt
+
+
+#question C
+def minuscules(phrase):
+    l=[]
+    for i in phrase:
+        if (65<=ord(i)<=90):
+            l.append(chr(ord(i)+32))
+        else:
+            l.append(i)
+    resu=""
+    for i in l:
+        resu=resu+i
+    return resu
+
+#Question D
+def anagramme(str1,str2):
+    if(len(str1)==len(str2)):
+        string1=minuscules(str1)
+        string2=minuscules(str2)
+        if (sorted(string1)==sorted(string2)):
+            return True
+        else:
+            return False
+    else:
+        return False
+
+#Question E    
+def nombre_ident(phr1,phr2):
+	lettres_communes = [lettre for lettre in phr1 if lettre in phr2]
+	print(lettres_communes)
+	lettres_communes_uniques = []
+
+	for lettre in lettres_communes:
+		if lettre not in lettres_communes_uniques:
+			lettres_communes_uniques.append(lettre)
+	return len(lettres_communes_uniques)
+
+def progPrincipal():
+#    m=input("Entrez un mot\n")
+#    m=m.lower()
+#    var=palindrome(m)
+#    if(var == True):
+#        print(m, " est un palindrome")
+#    else:
+#        print(m, " n'est pas un palindrome")
+#    phr2="Bonjour tout le monde"
+#    phr1="on"
+#    print("On trouve ",compter(phr1,phr2), " fois " , phr1 ," dans ",phr2)
+#    phr3="Bonjour Tout Le Monde"
+#    print(minuscules(phr3))
+#    if(anagramme("phrAse","eSraPh")):
+#        print("c'est un anagramme")
+#    else:
+#        print("ce n'est pas un anagramme")
+    phrase1="abcdef"
+    phrase2="aabfghi"
+    print("le nombre de lettres communs aux deux phrases est : ",nombre_ident(phrase1,phrase2))
+
+progPrincipal()
+
+
+# EXO 6
+#question A
+l=[12,3,5,78,23,11,17,67,54,90,1,14,8,34]
+l1=[1,2,3,4,5,6,7,8,9,10,11,12,13,14]
+l3=[1,2,3,1,3,4,5,3,6,5,7,9,2,8,9]
+
+#question A
+def moyenne(liste):
+    nbr=0
+    for i in liste:
+        nbr=nbr+i
+    nbr=nbr/len(liste)
+    return(nbr)
+
+#Question B
+def additionListe(liste1,liste2):
+    resuListe=[]
+    for i in range(0,len(liste1)):
+        resuListe.append(liste1[i]+liste2[i])
+    return resuListe
+
+#Question C
+def listeSansDoublon(liste):
+    listeResu=[]
+    for i in liste:
+        if i not in listeResu:
+            listeResu.append(i)
+    return listeResu
+
+#Question D
+def communsListe(liste1,liste2):
+    listeResu=[]
+    for i in liste1:
+        if i in liste2:
+            listeResu.append(i)
+    listeResu=listeSansDoublon(listeResu) # si sans doublons
+    return listeResu
+
+#Question E
+def elementsDistincts(liste1,liste2):
+    listeResu=[]
+    for i in liste1:
+                listeResu.append(i)
+    listeResu=listeSansDoublon(listeResu)
+    return listeResu
+
+
+#print(moyenne(l))
+#liste=additionListe(l,l1)
+#print(liste)
+#print(listeSansDoublon(l3))
+#print(communsListe(l1,l3))
+print(elementsDistincts(l1,l3))
+#print(l, "    ",l1)
